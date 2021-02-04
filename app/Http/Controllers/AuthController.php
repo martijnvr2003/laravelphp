@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use  validator,redirect,response;
-use app /user;
+use  validator, redirect, response;
+use app/user;
 use illuminate/support/facades/auth;
 use illuminate/support/facades/hash;
 
