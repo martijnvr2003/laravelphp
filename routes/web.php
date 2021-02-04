@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('about');
 });
 
-Route::get('/work', function () {
+Route::get('work', function () {
     return view('work');
+});
+
+Route::get('login', function () {
+    return view('login');
 });
 
 
@@ -29,10 +33,10 @@ Route::get('/contact', 'ContactController@index');
 Route::post('/contact/send', 'ContactController@ContactRequest'); 
 
 Route::get('/', function () {
-    return view('login');
+    return view('index');
 });
 
-Route::get(     'login',                'AuthController@index'            );
+// Route::get(     'login',                'AuthController@index'            );
 Route::post(    'post-login',           'AuthController@postLogin'        );
 Route::get(     'registration',         'AuthController@registration'     );
 Route::post(    'post-registration',    'AuthController@postregistration' );
